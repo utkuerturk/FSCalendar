@@ -29,6 +29,9 @@
 @property (assign, nonatomic) FSCalendarCellStyle cellStyle;
 @property (assign, nonatomic) BOOL                hasEvent;
 
+@property (strong, nonatomic) UIColor*               customEventColor;
+
+
 @property (readonly, getter = isPlaceholder)      BOOL placeholder;
 
 - (void)showAnimation;

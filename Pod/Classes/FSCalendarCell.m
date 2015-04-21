@@ -147,6 +147,17 @@
     [UIBezierPath bezierPathWithRect:_backgroundLayer.bounds].CGPath;
     _eventLayer.fillColor = _eventColor.CGColor;
     _eventLayer.hidden = !_hasEvent;
+    
+    
+    // Eğer event varsa ve custom eventCOlor tanımlanmışsa.
+    
+    if(_hasEvent && _customEventColor)
+    {
+        _backgroundLayer.hidden = NO;
+        _backgroundLayer.fillColor = _customEventColor.CGColor;
+        
+    }
+
 }
 
 - (BOOL)isPlaceholder

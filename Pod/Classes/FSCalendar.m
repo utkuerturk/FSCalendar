@@ -228,6 +228,8 @@
     cell.date               = [self dateForIndexPath:indexPath];
     cell.subtitle           = [self subtitleForDate:cell.date];
     cell.hasEvent           = [self hasEventForDate:cell.date];
+    cell.customEventColor   =  [self customEventColorForDate:cell.date];
+
     [cell configureCell];
     return cell;
 }
@@ -742,6 +744,15 @@
     }
     return NO;
 }
+
+- (UIColor*)customEventColorForDate:(NSDate *)date
+{
+    if (_dataSource && [_dataSource respondsToSelector:@selector(calendar:customEventColorForDate:)]) {
+        return [_dataSource calendar:self customEventColorForDate:date];
+    }
+    return NO;
+}
+
 
 - (void)setAutoAdjustTitleSize:(BOOL)autoAdjustTitleSize
 {

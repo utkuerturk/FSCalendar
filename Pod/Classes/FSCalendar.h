@@ -49,6 +49,8 @@ typedef NS_OPTIONS(NSInteger, FSCalendarCellState) {
 
 - (NSString *)calendar:(FSCalendar *)calendar subtitleForDate:(NSDate *)date;
 - (BOOL)calendar:(FSCalendar *)calendar hasEventForDate:(NSDate *)date;
+- (UIColor*)calendar:(FSCalendar *)calendar customEventColorForDate:(NSDate *)date;
+
 
 @end
 
