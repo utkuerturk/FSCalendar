@@ -151,7 +151,7 @@
     
     // Eğer event varsa ve custom eventCOlor tanımlanmışsa.
     
-    if(_hasEvent && _customEventColor &&  !self.isToday)
+    if(_hasEvent && _customEventColor &&  !self.selected && !self.isToday)
     {
         _backgroundLayer.hidden = NO;
         _backgroundLayer.fillColor = _customEventColor.CGColor;
